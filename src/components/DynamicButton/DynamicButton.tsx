@@ -1,4 +1,3 @@
-// import { Interface } from "readline";
 import React from 'react';
 import { ButtonContainer } from './styles';
 type DynamicButtonProps = {

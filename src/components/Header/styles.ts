@@ -4,7 +4,6 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
   background-color: white;
   color: black;
   width: 90%;
@@ -80,10 +79,11 @@ export const LogoTitleDesktop = styled.div`
 export const TreeButtomContainer = styled.div`
   display: flex;
   justify-content: flex-end;
-  width: auto;  
+  width: auto;
   gap: 10px;  
   
   @media (min-width: 768px) {
+    width: 60%;
     width: auto;  
     height: auto;
   }
