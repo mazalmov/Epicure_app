@@ -4,31 +4,30 @@ import emptyStar from '../../assets/Desktop/EmptyStar.png';
 import { StarsContainer } from "./styles";
 
 interface StarsProps {
-    cardId: number;
     rating: number;
 }
 
-const Stars: React.FC<StarsProps> = ({ cardId, rating }) => {
+const Stars: React.FC<StarsProps> = ({ rating }) => {
     const emptyStarsCount = 5 - rating;
 
     return (
-        <StarsContainer>
-            {Array.from({ length: rating }).map((_, index) => (
-                <img
-                    key={`fullstar-${cardId}-${index}`}
-                    src={fullStar}
-                    alt="Full Star"
-                />
-            ))}
+            <StarsContainer>
+                {Array.from({ length: rating }).map((_, index) => (
+                    <img
+                        key={`fullstar-${index}`}
+                        src={fullStar}
+                        alt="Full Star"
+                    />
+                ))}
 
-            {Array.from({ length: emptyStarsCount }).map((_, index) => (
-                <img
-                    key={`emptystar-${cardId}-${index}`}
-                    src={emptyStar}
-                    alt="Empty Star"
-                />
-            ))}
-        </StarsContainer>
+                {Array.from({ length: emptyStarsCount }).map((_, index) => (
+                    <img
+                        key={`emptystar-${index}`}
+                        src={emptyStar}
+                        alt="Empty Star"
+                    />
+                ))}
+            </StarsContainer>
     );
 };
 
