@@ -6,30 +6,24 @@ import {
     SearchBox,
     HeroSearchText
 } from './styles';
-import DynamicButton from '../DynamicButton/DynamicButton';
-import { Image } from '../Header/styles';
-import searchIcon from '../../assets/General/search_icon.png';
-
+import { Fade } from 'react-awesome-reveal';
 const Hero: React.FC = () => {
     return (
 
         <HeroContainer>
             <SearchContainer>
-            <Title>
-                Epicure works with the top <br />
-                chef restaurants in Tel Aviv
-            </Title>
+                <Fade direction="down" duration={1000}>
+                    <Title>
+                        Epicure works with the top <br />
+                        chef restaurants in Tel Aviv
+                    </Title>
+                </Fade>
 
                 <SearchBox>
-                    <DynamicButton>
-                        <Image
-                            src={searchIcon}
-                            alt={"searchIcon"}
-                            className="searchIcon"
-                        />
-                    </DynamicButton>
-                    <HeroSearchText placeholder="Search for restaurant cuisine, chef"
-                    />
+
+
+                    <HeroSearchText placeholder="Search for restaurant cuisine, chef" />
+
                 </SearchBox>
             </SearchContainer>
         </HeroContainer>
@@ -37,3 +31,4 @@ const Hero: React.FC = () => {
 
 }
 export default Hero;
+

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import HeroBackgroundDesktop from '../../assets/Desktop/HeroPicture_Desktop.png';
 import HeroBackgroundMobile from '../../assets/Mobile/HeroPicture_Mobile.png';
 import { Typography } from '../Typography';
-
+import { ScreenBreakPoints } from '../../constants/ScreenBreakPoints';
+import searchIcon from '../../assets/General/search_icon.png';
 export const Title = styled.h1`
     text-align: center; 
     word-break: break-word;
@@ -23,12 +24,12 @@ export const HeroContainer = styled.div`
   height: 273px; 
   box-sizing: border-box; 
 
-  @media (min-width: 768px) {
+  @media (min-width: ${ScreenBreakpoints.md}px) {
     background-image: url(${HeroBackgroundDesktop});
     height: 600px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width:${ScreenBreakpoints.lg}px) {
     height: 700px;
   }
 `;
@@ -44,12 +45,12 @@ export const SearchContainer = styled.div`
   box-sizing: border-box; 
   padding: 16px; 
 
-  @media (min-width: 768px) {
+  @media (${ScreenBreakpoints.md}px) {
     width: 55%;
     height: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media (${ScreenBreakpoints.lg}px) {
     width: 50%;
   }
 `;
@@ -64,12 +65,12 @@ export const SearchBox = styled.div`
   justify-content: space-between; 
   overflow: hidden; 
 
-  @media (min-width: 768px) {
+  @media (${ScreenBreakpoints.md}px) {
     width: 75%;
     height: 56px; 
   }
 
-  @media (min-width: 1024px) {
+  @media (${ScreenBreakpoints.lg}px) {
     width: 60%;
     height: 50px;
   }
@@ -77,22 +78,34 @@ export const SearchBox = styled.div`
 
 export const HeroSearchText = styled.input`
   flex-grow: 1;
-  padding: 8px;
+  padding: 8px 8px 8px 32px; 
   width: 100%; 
   height: 100%;
   border: none;
   border-radius: 4px;
   font-size: 32px;
   ${Typography.InputText}
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  background-image: url(${searchIcon});
+  background-repeat: no-repeat;
+  background-size: 20px 20px; 
+  background-position: left 8px center;
+
+  
 
   &::placeholder {
     color: #A6A6A6;
     ${Typography.InputText}
   }
+  
   &:focus {
     outline: none;  
   }
-
+  @media (${ScreenBreakpoints.md}px) {
+    background-position: left 12px center;
+  }
+  @media (${ScreenBreakpoints.lg}px) {
+    background-position: left 14px center;
+  }
 
 `;
