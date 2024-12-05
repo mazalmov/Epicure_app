@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ScreenBreakPoints } from '../../constants/ScreenBreakpoints';
+import { ScreenBreakPoints } from '../../constants/BreakPoints';
 export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
