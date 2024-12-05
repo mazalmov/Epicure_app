@@ -6,10 +6,11 @@ import {
     LogoContainer,
     LogoTitleDesktop,
     Image,
-    TreeButtomContainer,
+    TreeButtonContainer,
     SearchIconContainer,
     SearchText,
     RestorantAndChefsContainer,
+    RotatingElement
 } from './styles'
 import hambur from '../../assets/Mobile/HAMBUR.png';
 import logo from '../../assets/General/about-logo.png';
@@ -23,7 +24,6 @@ const Header: React.FC = () => {
 
     return (
         <HeaderContainer>
-
             <HamburContainer>
                 <DynamicButton>
                     <Image
@@ -32,18 +32,17 @@ const Header: React.FC = () => {
                         className="hambur"
                     />
                 </DynamicButton>
-
             </HamburContainer>
-
             <LogoContainer>
-                <DynamicButton>
-                    <Image
-                        src={logo}
-                        alt={"logo"}
-                        className="logo"
-                    />
-                </DynamicButton>
-
+                <RotatingElement>
+                    <DynamicButton>
+                        <Image
+                            src={logo}
+                            alt={"logo"}
+                            className="logo"
+                        />
+                    </DynamicButton>
+                </RotatingElement>
                 <LogoTitleDesktop>
                     <DynamicButton>
                         <Image
@@ -52,7 +51,6 @@ const Header: React.FC = () => {
                             className="epicure"
                         />
                     </DynamicButton>
-
                 </LogoTitleDesktop>
             </LogoContainer>
             <RestorantAndChefsContainer>
@@ -70,9 +68,8 @@ const Header: React.FC = () => {
                         className="chefs"
                     />
                 </DynamicButton>
-
             </RestorantAndChefsContainer>
-            <TreeButtomContainer>
+            <TreeButtonContainer>
                 <SearchIconContainer>
                     <SearchText />
                     <DynamicButton>
@@ -82,9 +79,7 @@ const Header: React.FC = () => {
                             className="searchIcon"
                         />
                     </DynamicButton>
-
                 </SearchIconContainer>
-
                 <DynamicButton>
                     <Image
                         src={userIcon}
@@ -99,14 +94,9 @@ const Header: React.FC = () => {
                         className="bag"
                     />
                 </DynamicButton>
-
-
-            </TreeButtomContainer>
-
-
+            </TreeButtonContainer>
         </HeaderContainer>
     )
 };
-
 export default Header;
 
