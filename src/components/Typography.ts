@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-
+import { ScreenBreakPoints } from '../constants/BreakPoints';
 export const Typography = {
   H1: css`
     font-family: 'Helvetica Neue', sans-serif;
@@ -7,28 +7,28 @@ export const Typography = {
     font-weight: 300;
     color: #000000;
 
-    @media (min-width: 768px) {
+    @media (min-width: ${ScreenBreakPoints.md}px) {
       font-size: 32px; 
     }
   `,
   H2: css`
     font-family: 'Helvetica Neue', sans-serif;
-    font-size: 16px; 
+    font-size: 18px; 
     font-weight: 300;
     color: #000000;
 
-    @media (min-width: 768px) {
-      font-size: 30px; 
+    @media (min-width: ${ScreenBreakPoints.md}px) {
+      font-size: 20px; 
     }
   `,
   H3: css`
     font-family: 'Helvetica Neue', sans-serif;
-    font-size: 18px; 
+    font-size: 16px; 
     font-weight: 400;
     color: #000000;
 
-    @media (min-width: 768px) {
-      font-size: 40px; 
+    @media (min-width: ${ScreenBreakPoints.md}px) {
+      font-size: 14px; 
     }
   `,
   BodyText: css`
@@ -37,7 +37,7 @@ export const Typography = {
     font-weight: 300;
     color: #000000;
 
-    @media (min-width: 768px) {
+    @media (min-width: ${ScreenBreakPoints.md}px) {
       font-size: 24px; 
     }
   `,
@@ -55,7 +55,7 @@ export const Typography = {
     font-weight: 300;
     color: #000000;
     text-align: center;
-    @media (min-width: 768px) {
+    @media (min-width: ${ScreenBreakPoints.md}px) {
       font-size: 20px; 
     }
   `,
