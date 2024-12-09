@@ -17,13 +17,12 @@ const PopularRestorants: React.FC = () => {
     return (
         <PopularRestorantsContainer>
             <Title> {"POPULAR RESTAURAN IN EPICURE:"}</Title>
-
             <Carousel cards={cards} />
+            <AllRestorantsContainer>
             <DynamicButton >
-                <AllRestorantsContainer>
                     <img src={IconNavigatorBuffer} alt={"IconNavigatorBuffer"} />
-                </AllRestorantsContainer>
             </DynamicButton>
+            </AllRestorantsContainer>
         </PopularRestorantsContainer>
     );
 };
