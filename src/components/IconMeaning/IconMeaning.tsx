@@ -1,30 +1,29 @@
 import React from 'react';
-import spicyIcon from '../../assets/General/spicyIcon.png';
-import vegetarianIcon from '../../assets/General/vegitarianIcon.png';
-import veganIcon from '../../assets/General/veganIcon.png';
-import {IconMeaningContainer} from './styles';
-
-const iconMap = {
-  spicy: spicyIcon,
-  vegetarian: vegetarianIcon,
-  vegan: veganIcon,
-} as const;
+import { iconMap } from '../../constants/IconMap';
+import { IconMeaningContainer } from './styles';
 
 interface IconMeaningProps {
   iconName: keyof typeof iconMap;
+  width?: number;  
+  height?: number;
 }
 
-const IconMeaning: React.FC<IconMeaningProps> = ({ iconName }) => {
+const IconMeaning: React.FC<IconMeaningProps> = ({ iconName, width, height }) => {
   const iconSrc = iconMap[iconName];
 
   return (
-    <div>
+    <>
       {iconSrc ? (
-        <IconMeaningContainer src={iconSrc} alt={iconName} />
+        <IconMeaningContainer
+          src={iconSrc}
+          alt={iconName}
+          width={width}  
+          height={height}  
+        />
       ) : (
-        <span>Icon not found</span> 
+        <span>Icon not found</span>
       )}
-    </div>
+    </>
   );
 };
 
