@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
   background-color: white;
   color: black;
   width: 90%;
-  height: auto;
+  max-height: 40px ;
   background-color: white;
   flex-direction: row;
 
