@@ -30,7 +30,7 @@ export const HeroContainer = styled.div`
   }
 
   @media (min-width:${ScreenBreakPoints.lg}px) {
-    height: 700px;
+    height: 650px;
   }
 `;
 
@@ -45,12 +45,12 @@ export const SearchContainer = styled.div`
   box-sizing: border-box; 
   padding: 16px; 
 
-  @media (${ScreenBreakPoints.md}px) {
+  @media (min-width:${ScreenBreakPoints.md}px) {
     width: 55%;
     height: auto;
   }
 
-  @media (${ScreenBreakPoints.lg}px) {
+  @media (min-width:${ScreenBreakPoints.lg}px) {
     width: 50%;
   }
 `;
@@ -65,12 +65,12 @@ export const SearchBox = styled.div`
   justify-content: space-between; 
   overflow: hidden; 
 
-  @media (${ScreenBreakPoints.md}px) {
+  @media (min-width: ${ScreenBreakPoints.md}px) {
     width: 75%;
     height: 56px; 
   }
 
-  @media (${ScreenBreakPoints.lg}px) {
+  @media (min-width:${ScreenBreakPoints.lg}px) {
     width: 60%;
     height: 50px;
   }
@@ -101,10 +101,10 @@ export const HeroSearchText = styled.input`
   &:focus {
     outline: none;  
   }
-  @media (${ScreenBreakPoints.md}px) {
+  @media (min-width: ${ScreenBreakPoints.md}px) {
     background-position: left 12px center;
   }
-  @media (${ScreenBreakPoints.lg}px) {
+  @media (min-width: ${ScreenBreakPoints.lg}px) {
     background-position: left 14px center;
   }
 
