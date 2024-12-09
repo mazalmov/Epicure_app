@@ -4,6 +4,7 @@ import { ScreenBreakPoints } from '../../constants/BreakPoints';
 import Stars from '../stars/stars';
 import IconMeaning from '../IconMeaning/IconMeaning';
 import Price from '../Price/Price';
+import { CardData } from '../../constants/CardData';
 import {
     CarouselWrapper,
     CardWrapper,
@@ -11,16 +12,6 @@ import {
     Description
 } from './styles';
 
-interface CardData {
-    id: number;
-    title: string;
-    imageUrl: string;
-    description?: string;
-    icon?: 'spicy' | 'vegetarian' | 'vegan';
-    chefname?: string;
-    stars?: number;
-    price?: number;
-}
 
 interface CarouselProps {
     cards: CardData[];
@@ -54,10 +45,10 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
                 breakpoints={{
                     [ScreenBreakPoints.sm]: {
                         slidesPerView: 2,
-                        spaceBetween: 5,
+                        spaceBetween: 3,
                     },
                     [ScreenBreakPoints.md]: {
-                        slidesPerView: 2.5,
+                        slidesPerView: 3,
                         spaceBetween: 5,
                     },
                 }}
