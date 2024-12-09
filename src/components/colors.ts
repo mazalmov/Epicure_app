@@ -7,6 +7,8 @@ export const Colors = {
       Beige: "#F9F4EA",
       Yellow: "#E19D1A",
       LightGrey: "#FAFAFA",
+      chefName: "#FFFFFFCC",
+
     },
   };
   
