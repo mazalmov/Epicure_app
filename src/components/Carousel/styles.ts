@@ -3,26 +3,26 @@ import { ScreenBreakPoints } from '../../constants/BreakPoints';
 import { Typography } from '../Typography';
 
 export const CarouselWrapper = styled.div`
-  display: flex;
+  display: block;
   flex-wrap: nowrap;
   width: 100%;
-  padding: 0 16px;
+  padding: 16px;
 
   .swiper {
-    display: flex;
+    display: block;
     justify-content: center;
     width: 100%;
   }
 
   .swiper-slide {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
   }
     
   .swiper-container {
     width: 100%;
-    display: flex;
+    display: block;
   }
 
 
@@ -51,7 +51,7 @@ export const CardWrapper = styled.div`
   overflow: hidden;
   text-align: center;
   flex-shrink: 0;
-  height: 350px;
+  height: auto;
   padding: 20px;
   width: 100%;
   max-width: 300px;
@@ -62,7 +62,7 @@ export const CardWrapper = styled.div`
 export const Title = styled.h3`
   text-align: center; 
   word-break: break-word;
-  ${Typography.H3}
+  ${Typography.H2}
 `;
 export const Description = styled.div`
   display: flex;
