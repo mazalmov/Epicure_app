@@ -29,7 +29,7 @@ const Chef: React.FC<ChefProp> = ({ fullName, imageUrl, chefInfo }) => {
         <ChefImageContainer>
           <ChefPicture src={imageUrl} alt={fullName} />
           <ChefName>{fullName}</ChefName>
-          </ChefImageContainer>
+        </ChefImageContainer>
         </LeftColumn>
         <RightColumn>
           <ChefInfo>{chefInfo}</ChefInfo>
