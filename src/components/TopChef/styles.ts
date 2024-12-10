@@ -11,19 +11,14 @@ export const Title = styled.h1`
 
 export const AllRestorantsContainer = styled.div`
   display: flex;
-  flex-direction: row;
   padding: 20px;
-  ${Typography.H1}
-  font-size: 24px;
-  color: #333;
-  margin: 0;
   justify-content: flex-start;
-
   @media (min-width: ${ScreenBreakPoints.md}px) {
-    justify-content: flex-end;
-    flex-direction: row-reverse;
+      display: none;
   }
 `;
+
+
 
 export const ChefRestorantsContainer = styled.div`
   align-items: center;
