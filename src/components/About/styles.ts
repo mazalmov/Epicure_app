@@ -37,12 +37,13 @@ export const LeftSide = styled.div`
 export const RightSide = styled.div`
   order: 1; 
   
+  
   @media (min-width: ${ScreenBreakPoints.md}px) {
+    padding: 10em ;
     order: 0;
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
     width: 50%;
     height: auto;
   }
