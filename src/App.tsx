@@ -5,6 +5,7 @@ import SignatureDish from "./components/SignatureDish/SignatureDish";
 import About from "./components/About/About";
 import TheMeaningOfOurIcons from "./components/TheMeaningOfOurIcons/TheMeaningOfOurIcons";
 import TopChef from "./components/TopChef/TopChef";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <TheMeaningOfOurIcons/>
       <TopChef/>
       <About/>
+      <Footer/>
       
 
 
