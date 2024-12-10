@@ -86,7 +86,7 @@ export const ChefInfo = styled.p`
 export const ChefImageContainer = styled.div`
   position: relative; 
   width: 100%;
-  max-width: 300px; 
+ 
 `;
 
 
