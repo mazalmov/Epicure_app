@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import { Colors } from "../colors";
 
 export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: ${Colors.Secondary.Beige};
     width: 100%; 
     height: auto;
     border-radius: 10px;
