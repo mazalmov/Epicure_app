@@ -59,16 +59,11 @@ export const IconContainer = styled.div`
 `;
 export const AllRestorantsContainer = styled.div`
     padding: 20px;
-    ${Typography.H1}
-    font-size: 24px;
-    color: #333;
-    margin: 0;
+    display: flex;
     justify-content: flex-start;
     @media (min-width: ${ScreenBreakPoints.md}px) {
         justify-content: flex-end;
-        flex-direction: row-reverse;
     }
-    
 `;
 export const PopularRestorantsContainer = styled.div`
     align-items: center;
