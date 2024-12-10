@@ -8,19 +8,15 @@ export const SignatureDishContainer = styled.div`
 `;
 
 export const AllSignatureDish = styled.div`
+    display: flex;
     padding: 20px;
-    ${Typography.H1}
-    font-size: 24px;
-    color: #333;
-    margin: 0;
-    text-align: left; 
-    display: block;
-
+    justify-content: flex-start;
     @media (min-width: ${ScreenBreakPoints.md}px) {
-        flex: none;
-
+        display: none;
     }
 `;
+
+
 export const Title = styled.h1`
   text-align: center; 
   word-break: break-word;
