@@ -8,7 +8,6 @@ export const CardContainer = styled.div`
     background-color: ${Colors.Secondary.Beige};
     width: 100%; 
     height: auto;
-    padding: 16px; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
