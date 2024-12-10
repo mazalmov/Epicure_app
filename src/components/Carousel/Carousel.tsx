@@ -9,7 +9,8 @@ import {
     CarouselWrapper,
     CardWrapper,
     Title,
-    Description
+    Description,
+    Image
 } from './styles';
 
 
@@ -56,7 +57,9 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
                 {cards.slice(0, isDesktop ? 3 : cards.length).map((card) => (
                     <SwiperSlide key={card.id}>
                         <CardWrapper>
+                            <Image>
                             <img src={card.imageUrl} alt={card.title} />
+                            </Image>
                             <Title>{card.title}</Title>
                             {card.chefname && <p>{card.chefname}</p>}
                             {card.stars && <Stars rating={card.stars} />}
