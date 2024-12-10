@@ -6,12 +6,11 @@ import { Typography } from "../Typography";
 export const FooterContainer=styled.div`
     display: flex;
     flex-direction: column; 
-    align-items: center;    
     padding: 30px;
     width: 100%;
     margin: 0 auto;
     background: ${Colors.Secondary.White};
-    text-align: center; 
+    text-align: left; 
     
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
