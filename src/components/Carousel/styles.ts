@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import { ScreenBreakPoints } from '../../constants/BreakPoints';
 import { Typography } from '../Typography';
+import { Colors } from '../colors';
 
 export const CarouselWrapper = styled.div`
   display: block;
   flex-wrap: nowrap;
   width: 100%;
   padding: 16px;
+ 
 
   .swiper {
     display: block;
@@ -48,11 +50,12 @@ export const CardWrapper = styled.div`
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: ${Colors.Secondary.Beige};
   overflow: hidden;
   text-align: center;
   flex-shrink: 0;
-  height: auto;
-  padding: 20px;
+  height: outo;
+  margin: 100px;
   width: 100%;
   max-width: 300px;
   justify-content: space-between;
@@ -71,8 +74,22 @@ export const Description = styled.div`
   justify-content: center;
   word-break: break-word;
   ${Typography.H3}
+  padding: 20px;
   
   @media (min-width: ${ScreenBreakPoints.md}px) {
     flex-direction: column-reverse;
   }
   `;
+export const Image = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  img {
+    width:100%; 
+    height: auto; 
+    object-fit: cover;
+  }
+`;
