@@ -1,16 +1,24 @@
 import React from 'react';
 import { ButtonContainer } from './styles';
+
 type DynamicButtonProps = {
     onClick?: () => void;
     children?: React.ReactNode;
+    className?: "signatureDish" | "topChef" | "popularRestorant";
 };
 
-const DynamicButton: React.FC<DynamicButtonProps> = ({ onClick, children }) => {
+const DynamicButton: React.FC<DynamicButtonProps> = ({ onClick, children, className }) => {
     return (
-        <ButtonContainer onClick={onClick}>
+        <ButtonContainer className={className} onClick={onClick}>
             {children}
         </ButtonContainer>
-
     );
-}
+};
+
 export default DynamicButton;
+
+
+
+
+
+
