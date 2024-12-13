@@ -3,20 +3,35 @@ import { Colors } from "../colors";
 import { Typography } from "../Typography";
 import { ScreenBreakPoints } from "../../constants/BreakPoints";
 
-
 export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 40px;
-  width: 100%;
   margin: 0 auto;
   background: ${Colors.Secondary.LightGrey};
+  width: 100%;  /* הרקע יתפשט על כל רוחב המסך */
+  box-sizing: border-box;
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+`;
+
+export const AboutContent = styled.div`
+  width: 100%;
+  flex-direction: column;
+
+  @media (min-width: ${ScreenBreakPoints.md}px){
+    max-width: 1185px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+
+  }
+
 `;
 
 export const LeftSide = styled.div`
@@ -24,10 +39,10 @@ export const LeftSide = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  order: 2; 
+  order: 2;
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
-    order: 0; 
+    order: 0;
     flex: 1;
     width: 50%;
     flex-direction: column;
@@ -35,17 +50,18 @@ export const LeftSide = styled.div`
 `;
 
 export const RightSide = styled.div`
-  order: 1; 
-  
-  
+  order: 1;
+
   @media (min-width: ${ScreenBreakPoints.md}px) {
-    padding: 10em ;
+    padding: 10em;
     order: 0;
     flex: 1;
     display: flex;
     justify-content: right;
     width: 50%;
     height: auto;
+    max-width: 178.22px;
+    max-height: 166px;
   }
 `;
 
@@ -89,10 +105,9 @@ export const Logo = styled.img`
 
 export const AboutText = styled.div`
   text-align: left;
-  word-wrap: break-word; 
-  white-space: normal; 
-
-  @media (max-width: ${ScreenBreakPoints.md - 1}px) {
+  word-wrap: break-word;
+  white-space: normal;
+  @media (max-width: ${ScreenBreakPoints.md}px) {
     order: 1;
   }
 `;
