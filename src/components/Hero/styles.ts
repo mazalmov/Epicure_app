@@ -1,111 +1,106 @@
 import styled from 'styled-components';
 import HeroBackgroundDesktop from '../../assets/Desktop/HeroPicture_Desktop.png';
-import HeroBackgroundMobile from '../../assets/Mobile/HeroPicture_Mobile.png';
 import { Typography } from '../Typography';
 import { ScreenBreakPoints } from '../../constants/BreakPoints';
 import searchIcon from '../../assets/General/search_icon.png';
-export const Title = styled.h1`
-    text-align: center; 
-    word-break: break-word;
-    ${Typography.H1}
-`;
 
 export const HeroContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(${HeroBackgroundMobile});
-  background-size: cover; 
-  flex-direction: column;
-  background-position: center; 
-  border: none;
-  padding: 0 16px;
+  background-image: url(${HeroBackgroundDesktop});
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
-  height: 273px; 
-  box-sizing: border-box; 
+  background-size: cover;
 
-  @media (min-width: ${ScreenBreakPoints.md}px) {
-    background-image: url(${HeroBackgroundDesktop});
-    height: 600px;
-  }
+`;
 
-  @media (min-width:${ScreenBreakPoints.lg}px) {
-    height: 650px;
-  }
+export const Title = styled.h1`
+  text-align: left;
+  text-align: center;
+  word-break: break-word;
+  ${Typography.H1}
 `;
 
 export const SearchContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 90%; 
-  max-width: 1200px;
-  height: auto; 
+  color: #000000;
   align-items: center;
+  justify-content: center;
   background: #FFFFFFE0;
-  box-sizing: border-box; 
-  padding: 16px; 
+  max-width: 335px;
+  max-height: 144px;
+  margin-top: 65px;
+  margin-bottom: 64px;
+  padding-left: 10px;
+  padding-right: 10px;
 
-  @media (min-width:${ScreenBreakPoints.md}px) {
-    width: 55%;
-    height: auto;
+  @media (min-width: ${ScreenBreakPoints.md}px) {
+    max-height: 221px;
+    max-width: 776px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom:37px ;
+    margin-top: 236px;
+    margin-bottom: 239px;
+  }
+  @media (min-width: ${ScreenBreakPoints.lg}px) {
+
+    padding-left: 187px;
+    padding-right: 187px;
+
   }
 
-  @media (min-width:${ScreenBreakPoints.lg}px) {
-    width: 50%;
-  }
 `;
 
 export const SearchBox = styled.div`
   display: flex;
   width: 100%;
-  max-width: 600px; 
-  height: 50px; 
+  max-width: 600px;
+  height: 50px;
   box-sizing: border-box;
   padding: 8px;
-  justify-content: space-between; 
-  overflow: hidden; 
+  justify-content: space-between;
+  overflow: hidden;
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
-    width: 75%;
-    height: 56px; 
+    width: 505px;
+    max-height: 48px;
   }
 
-  @media (min-width:${ScreenBreakPoints.lg}px) {
-    width: 60%;
+  @media (min-width: ${ScreenBreakPoints.lg}px) {
     height: 50px;
   }
 `;
 
 export const HeroSearchText = styled.input`
   flex-grow: 1;
-  padding: 8px 8px 8px 32px; 
-  width: 100%; 
+  padding: 8px 8px 8px 32px;
+  width: 100%;
   height: 100%;
   border: none;
   border-radius: 4px;
   font-size: 32px;
-  ${Typography.InputText}
+  ${Typography.InputText};
   box-sizing: border-box;
   background-image: url(${searchIcon});
   background-repeat: no-repeat;
-  background-size: 20px 20px; 
+  background-size: 20px 20px;
   background-position: left 8px center;
-
-  
-
   &::placeholder {
     color: #A6A6A6;
     ${Typography.InputText}
   }
-  
+
   &:focus {
-    outline: none;  
+    outline: none;
   }
+
   @media (min-width: ${ScreenBreakPoints.md}px) {
     background-position: left 12px center;
   }
+
   @media (min-width: ${ScreenBreakPoints.lg}px) {
     background-position: left 14px center;
   }
-
 `;
