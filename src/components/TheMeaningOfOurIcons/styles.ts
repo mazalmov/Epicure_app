@@ -7,14 +7,13 @@ import { ScreenBreakPoints } from "../../constants/BreakPoints";
 export const MeaningIconsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 40px;
-    width: 100%;
-     margin: 0 auto;
-     background: ${Colors.Secondary.LightGrey};
+    align-items: center;
+    padding: 16px;
+    width: inherit;
+    margin: 0 auto;
+    background: ${Colors.Secondary.LightGrey};
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
-    display: flex;
     justify-content: space-between;
   }
 `;
@@ -42,17 +41,20 @@ export const Text = styled.h3`
   font: ${Typography.BodyText};
 `;
 export const TreeIcons = styled.div`
-order:2;
+  order:2;
   display: flex;
   flex-direction: column; 
   align-items: center;
+  justify-content: center;
   width: 100%;
   
   @media (min-width: ${ScreenBreakPoints.md}px) {
     flex-direction: row; 
     justify-content: center;
+    max-width: 488px;
   }
 `;
+
 export const IconContainer = styled.div`
   width: 100%;     
   height: 100%;     

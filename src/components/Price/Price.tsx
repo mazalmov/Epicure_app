@@ -8,9 +8,8 @@ interface PriceProps {
 const Price: React.FC<PriceProps> = ({ price }) => {
   return (
     <PriceContainer>
-      <PriceText>
-        ₪
-        {price}
+      <PriceText>   
+        ₪{price}
       </PriceText>
     </PriceContainer>
   );

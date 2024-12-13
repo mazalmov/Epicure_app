@@ -1,5 +1,7 @@
 export const ScreenBreakPoints = {
+    msm: 378,
     sm: 500,
     md: 768,
-    lg: 1024,
+    mmd: 1000,
+    lg: 1440,
 }

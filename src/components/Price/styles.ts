@@ -8,22 +8,23 @@ export const PriceContainer = styled.div`
   font-size: 18px;
   font-weight: bold;
   color: #000;
-
+  padding-bottom: 10px;
+  padding-left:16px;
   @media (min-width: ${ScreenBreakPoints.md}px) {
-    justify-content: center;
+    padding-left:0px;
+    justify-content: center; 
     position: relative;
-    width: 100%;
-
+    width: 80%;
     &::before,
     &::after {
       content: "";
       flex-grow: 1;
       height: 1px;
-      background: #000;
+      background: #979797;
     }
 
     &::before {
-      margin-right: 8px;
+      margin-right: 15px;
     }
 
     &::after {
@@ -33,8 +34,11 @@ export const PriceContainer = styled.div`
 `;
 
 export const PriceText = styled.span`
-    font-family: 'Helvetica Neue', sans-serif;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
+color: #000000;
+font-size: 24px;
+font-weight: 200;
+line-height: 30px;
+letter-spacing: 1.9700000286102295px;
+text-align: center;
+
 `;
