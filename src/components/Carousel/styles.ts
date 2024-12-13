@@ -1,95 +1,121 @@
 import styled from 'styled-components';
 import { ScreenBreakPoints } from '../../constants/BreakPoints';
-import { Typography } from '../Typography';
 import { Colors } from '../colors';
 
 export const CarouselWrapper = styled.div`
   display: block;
   flex-wrap: nowrap;
   width: 100%;
-  padding: 16px;
- 
-
   .swiper {
     display: block;
     justify-content: center;
+    height: 100%;
     width: 100%;
   }
-
   .swiper-slide {
     display: block;
     justify-content: center;
     align-items: center;
   }
-    
   .swiper-container {
     width: 100%;
     display: block;
   }
 
 
-  @media (min-width: ${ScreenBreakPoints.md}px) {
-    .swiper {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); 
-      gap: 20px;
-    }
-    .swiper-slide {
-      display: initial; 
-    }
-  }
-  @media (max-width: ${ScreenBreakPoints.md - 1}px) {
-    .swiper {
-      display: flex;
-      justify-content: center;
-    }
-  }
 `;
 
 export const CardWrapper = styled.div`
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: ${Colors.Secondary.Beige};
-  overflow: hidden;
-  text-align: center;
-  flex-shrink: 0;
-  height: outo;
-  margin: 100px;
-  width: 100%;
-  max-width: 300px;
-  justify-content: space-between;
-
-`;
-
-export const Title = styled.h3`
-  text-align: center; 
-  word-break: break-word;
-  ${Typography.H2}
-`;
-export const Description = styled.div`
   display: flex;
-  flex-direction: column; 
-  align-items: center;
+  flex-direction: column;
+  background-color: ${Colors.Secondary.Beige};
+  text-align: left;
   justify-content: center;
-  word-break: break-word;
-  ${Typography.H3}
-  padding: 20px;
-  
+  width: 245px;
+  height: auto;
+  justify-content: space-between;
   @media (min-width: ${ScreenBreakPoints.md}px) {
-    flex-direction: column-reverse;
+    height: auto;
+    width: 380px;
+    align-items: center;
+    text-align: center;
   }
-  `;
+`;
+
+export const ChefName = styled.p`
+  font-family: Helvetica Neue;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 20px;
+  letter-spacing: 1.9700000286102295px;
+  text-align: left;
+  padding-left:16px;
+  width: 200px;
+  margin: 0px;
+  margin-bottom: 8px;
+  @media (min-width: ${ScreenBreakPoints.md}px) {
+    text-align: center;
+    margin-top: 5px;
+    padding-left:0px;
+    font-size: 24px;
+  }
+`;
+interface TitleProps {
+  chefName?: string; 
+  description?:string;
+}
+export const Title = styled.h1<TitleProps>`
+  text-align: left;
+  padding-left:16px;
+  height: 50px;
+  font-family: Helvetica Neue;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 47px;
+  @media (min-width: ${ScreenBreakPoints.md}px) {
+    padding-bottom: ${({ chefName }) => (chefName ? '0' : '50px')}; 
+    padding-bottom: ${({ description }) => (description ? '50px' : '0')};
+
+    font-size: 40px;
+    text-align: center;
+    justify-content: left;
+    padding-left:96px;
+    padding-right: 96px;
+  }
+`;
+
+export const Description = styled.div`
+  font-family: Helvetica Neue;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 20px;
+  letter-spacing: 1.9700000286102295px;
+  text-align: left;
+  padding-left: 16px;
+  padding-right: 16px;
+  justify-content: flex-end;
+  @media (min-width: ${ScreenBreakPoints.md}px) {
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    height: 180px;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+  }
+`;
+
 export const Image = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-
   img {
-    width:100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
     object-fit: cover;
   }
 `;
+
