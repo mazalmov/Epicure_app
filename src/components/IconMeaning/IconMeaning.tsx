@@ -1,6 +1,6 @@
 import React from 'react';
 import { iconMap } from '../../constants/IconMap';
-import { IconMeaningContainer } from './styles';
+import { IconMeaningContainer ,IconContainer} from './styles';
 
 interface IconMeaningProps {
   iconName: keyof typeof iconMap;
@@ -12,9 +12,9 @@ const IconMeaning: React.FC<IconMeaningProps> = ({ iconName, width, height }) =>
   const iconSrc = iconMap[iconName];
 
   return (
-    <>
+    <IconMeaningContainer>
       {iconSrc ? (
-        <IconMeaningContainer
+        <IconContainer
           src={iconSrc}
           alt={iconName}
           width={width}  
@@ -23,7 +23,7 @@ const IconMeaning: React.FC<IconMeaningProps> = ({ iconName, width, height }) =>
       ) : (
         <span>Icon not found</span>
       )}
-    </>
+    </IconMeaningContainer>
   );
 };
 
