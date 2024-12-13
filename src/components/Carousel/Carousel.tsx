@@ -10,9 +10,9 @@ import {
     CardWrapper,
     Title,
     Description,
-    Image
+    Image,
+    ChefName
 } from './styles';
-
 
 interface CarouselProps {
     cards: CardData[];
@@ -28,45 +28,51 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
         };
 
         handleResize();
-
         window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return (
         <CarouselWrapper>
             <Swiper
                 spaceBetween={10}
-                slidesPerView={isDesktop ? 3 : 1.1}
-                loop={!isDesktop ? true : false}
+                slidesPerView={isDesktop ? 3 : 1.5}
+                loop={!isDesktop}
                 allowTouchMove={!isDesktop}
+                autoHeight={true}
                 breakpoints={{
+                    [ScreenBreakPoints.msm]: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 18,
+                      },
                     [ScreenBreakPoints.sm]: {
-                        slidesPerView: 2,
-                        spaceBetween: 3,
+                      slidesPerView: 2,
+                      spaceBetween: 24,
                     },
-                    [ScreenBreakPoints.md]: {
-                        slidesPerView: 3,
-                        spaceBetween: 5,
+                    [ScreenBreakPoints.mmd]: {
+                      slidesPerView: 2.5,
+                      spaceBetween: 24, 
                     },
-                }}
+                    [ScreenBreakPoints.lg]: 
+                    {
+                      slidesPerView: 3,
+                      spaceBetween: 24, 
+                    },
+                  }}
             >
                 {cards.slice(0, isDesktop ? 3 : cards.length).map((card) => (
                     <SwiperSlide key={card.id}>
                         <CardWrapper>
                             <Image>
-                            <img src={card.imageUrl} alt={card.title} />
+                                <img src={card.imageUrl} alt={card.title} />
                             </Image>
-                            <Title>{card.title}</Title>
-                            {card.chefname && <p>{card.chefname}</p>}
+                            <Title chefName={card.chefname}  description={card.description}> {card.title} </Title>
+                            {card.chefname && <ChefName>{card.chefname}</ChefName>}
                             {card.stars && <Stars rating={card.stars} />}
                             {card.description && card.icon && (
                                 <Description>
+                                    {card.description}
                                     <IconMeaning iconName={card.icon} />
-                                    <p>{card.description}</p>
                                 </Description>
                             )}
                             {card.price && <Price price={card.price} />}
