@@ -2,7 +2,7 @@ import React from 'react';
 import DynamicButton from '../../components/DynamicButton/DynamicButton';
 import {
     HeaderContainer,
-    HamburContainer,
+    RightSide,
     LogoContainer,
     LogoTitleDesktop,
     Image,
@@ -12,7 +12,6 @@ import {
     RestorantAndChefsContainer,
     RotatingElement
 } from './styles'
-import hambur from '../../assets/Mobile/HAMBUR.png';
 import logo from '../../assets/General/about-logo.png';
 import epicure from '../../assets/Desktop/epicure.png';
 import bag from '../../assets/General/bag.png';
@@ -24,15 +23,7 @@ const Header: React.FC = () => {
 
     return (
         <HeaderContainer>
-            <HamburContainer>
-                <DynamicButton>
-                    <Image
-                        src={hambur}
-                        alt={"hambur"}
-                        className="hambur"
-                    />
-                </DynamicButton>
-            </HamburContainer>
+            <RightSide>
             <LogoContainer>
                 <RotatingElement>
                     <DynamicButton>
@@ -54,21 +45,29 @@ const Header: React.FC = () => {
                 </LogoTitleDesktop>
             </LogoContainer>
             <RestorantAndChefsContainer>
+                
                 <DynamicButton>
                     <Image
                         src={restaurants}
                         alt={"restaurants"}
                         className="restaurants"
+                        width="108px"
+                        height="30px"
                     />
                 </DynamicButton>
                 <DynamicButton>
                     <Image
                         src={chefs}
                         alt={"chefs"}
-                        className="chefs"
+                        className="chefs"                         
+                        width="53px"
+                        height="30px"
+
+                        
                     />
                 </DynamicButton>
             </RestorantAndChefsContainer>
+            </RightSide>
             <TreeButtonContainer>
                 <SearchIconContainer>
                     <SearchText />

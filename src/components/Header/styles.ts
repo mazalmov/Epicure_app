@@ -1,111 +1,111 @@
 import styled from 'styled-components';
 import { ScreenBreakPoints } from '../../constants/BreakPoints';
+
 export const HeaderContainer = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  color: black;
-  width: 90%;
-  max-height: 40px ;
-  background-color: white;
-  flex-direction: row;
-
+    display: none;
   @media (min-width: ${ScreenBreakPoints.md}px) {
-    padding: 10px;
-  }
-
-  @media (min-width: ${ScreenBreakPoints.lg}px) {
-    padding: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    max-width: ${ScreenBreakPoints.lg}px;
+    align-items: center;
+    max-height: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 `;
-export const HamburContainer = styled.div`
-  display: flex;
-  align-items: start;
-  justify-content: flex-start;
-  padding: 15px;
-  width: auto; 
-  display: block;
-  
-  @media (${ScreenBreakPoints.md}px) {
-    display: none;
-    padding: 20px;
-  }
 
-  @media (${ScreenBreakPoints.lg}px) {
-    padding: 30px;
-  }
+export const RightSide = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: nowrap;
+  max-width: inherit;
 `;
 
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: 15px;
-  color: black;
-  width: 100%; 
-  max-width: 200px; 
-  
-  @media (min-width: ${ScreenBreakPoints.md}px) {
-    padding: 20px;
-  }
-
-  @media (min-width: ${ScreenBreakPoints.lg}px) {
-    padding: 30px;
-  }
+  max-width: 126px;
+  max-height: 33px;
 `;
 
+export const RestorantAndChefsContainer = styled.div`
+  display: flex;
+  gap: 32px;
+  padding-top: 7px;
+  padding-left: 25px;
+  flex-direction: row;
+  align-items: end;
+`;
+
+export const RotatingElement = styled.div`
+  max-width: 33px;
+  display: inline-block;
+  &:hover {
+    animation: rotate 0.65s linear;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+`;
 
 export const LogoTitleDesktop = styled.div`
-  display: none;
-
-  @media (min-width: ${ScreenBreakPoints.md}px) {
-    display: flex;
-    padding: 5px;
-    width: 70%;
-    height: auto;
-    display: block;
-  }
+  max-width: 144px;
+  display: flex;
+  padding: 5px;
+  width: 70%;
+  height: auto;
 `;
 
+interface ImageProps {
+  width?: string;
+  height?: string;
+}
 
-  export const Image = styled.img`
-  width: 100%;    
-  height: auto;    
-  object-fit: contain; 
+export const Image = styled.img<ImageProps>`
+  margin-left: 10px;
+  display: block;
+  object-fit: contain;
+  padding-top: 6px;
+  padding-bottom: 8px;
   cursor: pointer;
+  max-width: ${({ width }) => width || 'auto'};
+  max-height: ${({ height }) => height || 'auto'};
 `;
 
 export const TreeButtonContainer = styled.div`
   display: flex;
+  max-height: 36px;
   justify-content: flex-end;
-  width: auto;
-  gap: 10px;  
-  
-  @media (min-width: ${ScreenBreakPoints.md}px) {
-    width: 60%;
-    width: auto;  
-    height: auto;
-  }
-
-  @media (min-width: ${ScreenBreakPoints.lg}px) {
-    width: auto; 
-    height: auto;
-  }
 `;
+
 export const SearchIconContainer = styled.div`
   display: flex;
-  align-items: center; 
-  justify-content: center;  
-  width: auto; 
-  padding: 0;
-  margin: 0; 
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 410px;
+  max-height: 36px;
 `;
 
 export const SearchText = styled.input`
-  display: none;  
-  width: 100%;  
-  padding: 5px;
-  border: none; 
+  display: none;
+  max-width: 372px;
+  max-height: 22px;
+  padding-left: 12px;
+  padding-right: 24px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  border: none;
   border-radius: 4px;
   font-size: 16px;
 
@@ -117,39 +117,5 @@ export const SearchText = styled.input`
   @media (min-width: ${ScreenBreakPoints.lg}px) {
     height: 34px;
     font-size: 18px;
-  }
-`;
-
-export const RestorantAndChefsContainer = styled.div`
-  display: none; 
-
-  
-  @media (min-width: ${ScreenBreakPoints.md}px) {
-    gap: 10px;
-    display: flex; 
-    flex-direction: row; 
-    width: 20%;
-    height: auto;
-  }
-
-  @media (min-width: ${ScreenBreakPoints.lg}px) {
-    width: 374px;
-    height: 34px;
-  }
-`;
-
-export const RotatingElement = styled.div`
-  display: inline-block;
-  &:hover {
-    animation: rotate 0.65s linear;
-  }
-
-  @keyframes rotate {
-    from {
-    transform: rotateY(0deg);
-    }
-    to {
-    transform: rotateY(360deg);
-    }
   }
 `;
