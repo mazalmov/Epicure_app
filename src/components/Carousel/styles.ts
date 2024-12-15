@@ -69,11 +69,16 @@ export const Title = styled.h1<{ $chefName?: string; $description?: string }>`
   font-size: 20px;
   font-weight: 400;
   line-height: 47px;
+  margin-bottom: ${({ $chefName, $description }) => {
+      if ($chefName && !$description) return '0';
+      if ($description) return '50px';
+      return '0';
+    }};
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
     padding-bottom: ${({ $chefName, $description }) => {
       if ($chefName && !$description) return '0';
-      if ($description) return '50px';
+      if ($description) return '8px';
       return '50px';
     }};
     font-size: 40px;
