@@ -60,29 +60,30 @@ export const ChefName = styled.p`
     font-size: 24px;
   }
 `;
-interface TitleProps {
-  chefName?: string; 
-  description?:string;
-}
-export const Title = styled.h1<TitleProps>`
+
+export const Title = styled.h1<{ $chefName?: string; $description?: string }>`
   text-align: left;
-  padding-left:16px;
+  padding-left: 16px;
   height: 50px;
   font-family: Helvetica Neue;
   font-size: 20px;
   font-weight: 400;
   line-height: 47px;
-  @media (min-width: ${ScreenBreakPoints.md}px) {
-    padding-bottom: ${({ chefName }) => (chefName ? '0' : '50px')}; 
-    padding-bottom: ${({ description }) => (description ? '50px' : '0')};
 
+  @media (min-width: ${ScreenBreakPoints.md}px) {
+    padding-bottom: ${({ $chefName, $description }) => {
+      if ($chefName && !$description) return '0';
+      if ($description) return '50px';
+      return '50px';
+    }};
     font-size: 40px;
     text-align: center;
     justify-content: left;
-    padding-left:96px;
+    padding-left: 96px;
     padding-right: 96px;
   }
 `;
+
 
 export const Description = styled.div`
   font-family: Helvetica Neue;
