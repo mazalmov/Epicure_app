@@ -29,7 +29,6 @@ export const SearchContainer = styled.div`
   justify-content: center;
   background: #FFFFFFE0;
   max-width: 335px;
-  max-height: 144px;
   margin-top: 65px;
   margin-bottom: 64px;
   padding-left: 10px;
@@ -56,19 +55,26 @@ export const SearchContainer = styled.div`
 export const SearchBox = styled.div`
   display: flex;
   width: 100%;
-  max-width: 600px;
   height: 50px;
   box-sizing: border-box;
   padding: 8px;
   justify-content: space-between;
   overflow: hidden;
+  height: auto;
+  overflow: hidden;
+  max-width: 100%;
 
+  @media (min-width: ${ScreenBreakPoints.sm}px) {
+    max-width: 335px;
+    max-height: 144px;
+  }
   @media (min-width: ${ScreenBreakPoints.md}px) {
-    width: 505px;
+    max-width: 505px;
     max-height: 48px;
   }
 
   @media (min-width: ${ScreenBreakPoints.lg}px) {
+    min-width: 505px;
     height: 50px;
   }
 `;
@@ -78,7 +84,7 @@ export const HeroSearchText = styled.input`
   padding: 8px 8px 8px 32px;
   width: 100%;
   height: 100%;
-  border: none;
+  border: 0.5px solid #000000;
   border-radius: 4px;
   font-size: 32px;
   ${Typography.InputText};
@@ -87,6 +93,10 @@ export const HeroSearchText = styled.input`
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: left 8px center;
+  
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   &::placeholder {
     color: #A6A6A6;
     ${Typography.InputText}
@@ -95,12 +105,19 @@ export const HeroSearchText = styled.input`
   &:focus {
     outline: none;
   }
+  @media (min-width: ${ScreenBreakPoints.sm}px) {
+    font-size: 12px;
+    min-width: 375px;
+  }
+
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
     background-position: left 12px center;
+
   }
 
   @media (min-width: ${ScreenBreakPoints.lg}px) {
     background-position: left 14px center;
   }
 `;
+
