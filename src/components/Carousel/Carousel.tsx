@@ -44,21 +44,21 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
                     [ScreenBreakPoints.msm]: {
                         slidesPerView: 1.5,
                         spaceBetween: 18,
-                      },
+                    },
                     [ScreenBreakPoints.sm]: {
-                      slidesPerView: 2,
-                      spaceBetween: 24,
+                        slidesPerView: 2,
+                        spaceBetween: 24,
                     },
                     [ScreenBreakPoints.mmd]: {
-                      slidesPerView: 2.5,
-                      spaceBetween: 24, 
+                        slidesPerView: 2.5,
+                        spaceBetween: 24,
                     },
-                    [ScreenBreakPoints.lg]: 
+                    [ScreenBreakPoints.lg]:
                     {
-                      slidesPerView: 3,
-                      spaceBetween: 24, 
+                        slidesPerView: 3,
+                        spaceBetween: 24,
                     },
-                  }}
+                }}
             >
                 {cards.slice(0, isDesktop ? 3 : cards.length).map((card) => (
                     <SwiperSlide key={card.id}>
@@ -66,7 +66,7 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
                             <Image>
                                 <img src={card.imageUrl} alt={card.title} />
                             </Image>
-                            <Title chefName={card.chefname}  description={card.description}> {card.title} </Title>
+                            <Title $chefName={card.chefname} $description={card.description}> {card.title} </Title>
                             {card.chefname && <ChefName>{card.chefname}</ChefName>}
                             {card.stars && <Stars rating={card.stars} />}
                             {card.description && card.icon && (
