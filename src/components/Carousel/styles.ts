@@ -52,7 +52,7 @@ export const ChefName = styled.p`
   padding-left:16px;
   width: 200px;
   margin: 0px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   @media (min-width: ${ScreenBreakPoints.md}px) {
     text-align: center;
     margin-top: 5px;
@@ -71,14 +71,19 @@ export const Title = styled.h1<{ $chefName?: string; $description?: string }>`
   line-height: 47px;
   margin-bottom: ${({ $chefName, $description }) => {
       if ($chefName && !$description) return '0';
-      if ($description) return '50px';
+      if ($description) return '0';
       return '0';
     }};
-
+  padding-bottom: ${({ $chefName, $description }) => {
+      if ($chefName && !$description) return '0';
+      if ($description) return '0';
+      return '8px';
+    }};
+    
   @media (min-width: ${ScreenBreakPoints.md}px) {
     padding-bottom: ${({ $chefName, $description }) => {
       if ($chefName && !$description) return '0';
-      if ($description) return '8px';
+      if ($description) return '50px';
       return '50px';
     }};
     font-size: 40px;
