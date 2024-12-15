@@ -4,8 +4,8 @@ import {
     SearchContainer,
     Title,
     SearchBox,
-    HeroSearchText
-} from './styles';
+    HeroSearchText,
+} from './styles'
 import { Fade } from 'react-awesome-reveal';
 const Hero: React.FC = () => {
     return (
@@ -20,7 +20,6 @@ const Hero: React.FC = () => {
                 </Fade>
 
                 <SearchBox>
-
 
                     <HeroSearchText placeholder="Search for restaurant cuisine, chef" />
 
