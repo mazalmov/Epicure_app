@@ -1,4 +1,6 @@
+
 import styled from 'styled-components';
+import { ScreenBreakPoints } from '../../constants/BreakPoints';
 
 export const ButtonContainer = styled.button`
   display: flex; 
@@ -19,24 +21,32 @@ export const ButtonContainer = styled.button`
 
   &.signatureDish {
     display: flex;
+    padding-top: 18.5px;
+    padding-bottom: 48px;
 
-    @media (min-width: 768px) {
+
+    @media (min-width: ${ScreenBreakPoints.md}px) {
       display: none; 
     }
   }
 
   &.topChef {
     display: flex;
+    padding-top: 18.5px;
+    padding-bottom: 48px;
 
-    @media (min-width: 768px) {
+    @media (min-width: ${ScreenBreakPoints.md}px) {
       display: none; 
     }
   }
 
   &.popularRestorant {
     display: flex;
+    padding-top: 18.5px;
+    padding-bottom: 48px;
 
-    @media (min-width: 768px) {
+
+    @media (min-width: ${ScreenBreakPoints.md}px) {
       justify-content: end;
     }
   }
