@@ -14,9 +14,9 @@ interface CarouselContainerProp{
 
 const CarouselContainer: React.FC <CarouselContainerProp>= ({cards,title,className}) => {
     return (
-        <RestorantsContainer>
-            <Title> {title}</Title>
-            <Carousel cards={cards} />
+        <RestorantsContainer className={className}>
+            <Title className={className}> {title}</Title>
+            <Carousel cards={cards} className={className}/>
             <AllRestorantsContainer>
             <DynamicButton className={className}>
                     <img src={IconNavigatorBuffer} alt={"IconNavigatorBuffer"} />
