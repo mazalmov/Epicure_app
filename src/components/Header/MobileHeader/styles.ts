@@ -42,11 +42,11 @@ export const RotatingElement = styled.div`
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   max-height: 32px;
   max-width: 33px;
   padding-top: 7px;
   padding-bottom: 7px;
-
 `;
 
 export const TreeButtonContainer = styled.div`
@@ -56,14 +56,15 @@ export const TreeButtonContainer = styled.div`
   justify-content: flex-end;
   max-width: 100px;
   max-height: 20px;
-  gap: auto;
+  gap: 20px;
 
 `;
 
-export const Image = styled.img`
-  display: block;
-  object-fit: contain;
-  max-width: 20px;
-  cursor: pointer;
+export const Image = styled.img<{ $maxWidth?: string; $maxHeight?: string }>`
+    display: block;
+    object-fit: contain;
+    cursor: pointer;
+    max-width: ${({ $maxWidth }) => ($maxWidth ? `${$maxWidth}px` : '20px')};
+    max-height: ${({ $maxHeight }) => ($maxHeight ? `${$maxHeight}px` : '20px')};
 
 `;
