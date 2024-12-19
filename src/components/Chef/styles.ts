@@ -12,7 +12,13 @@ export const ChefContainer = styled.div`
   align-items: center;
   @media (min-width: ${ScreenBreakPoints.md}px) {
     max-width: 1185px;
-    ;
+    margin-bottom: 45px;
+  }
+  @media (min-width: ${ScreenBreakPoints.mmd}px){
+    padding-left: 16px;
+  }
+  @media (min-width: ${ScreenBreakPoints.lg}px){
+    padding-left: 0;
   }
 `;
 

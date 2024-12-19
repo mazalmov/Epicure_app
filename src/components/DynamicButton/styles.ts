@@ -4,8 +4,7 @@ import { ScreenBreakPoints } from '../../constants/BreakPoints';
 
 export const ButtonContainer = styled.button`
   display: flex; 
-  align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background: none;
   border: none;
   padding: 0;
@@ -23,7 +22,8 @@ export const ButtonContainer = styled.button`
     display: flex;
     padding-top: 18.5px;
     padding-bottom: 48px;
-
+    max-width: 172px;
+    max-height: 35px;
 
     @media (min-width: ${ScreenBreakPoints.md}px) {
       display: none; 
@@ -34,6 +34,8 @@ export const ButtonContainer = styled.button`
     display: flex;
     padding-top: 18.5px;
     padding-bottom: 48px;
+    max-width: 172px;
+    max-height: 35px;
 
     @media (min-width: ${ScreenBreakPoints.md}px) {
       display: none; 
@@ -41,13 +43,16 @@ export const ButtonContainer = styled.button`
   }
 
   &.popularRestorant {
-    display: flex;
+    display: flex;  
     padding-top: 18.5px;
     padding-bottom: 48px;
-
+    max-width: 172px;
+    max-height: 35px;
 
     @media (min-width: ${ScreenBreakPoints.md}px) {
       justify-content: end;
+      max-width: 226px;
+      max-height: 35px;
     }
   }
 `;

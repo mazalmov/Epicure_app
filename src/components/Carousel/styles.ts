@@ -25,7 +25,7 @@ export const CarouselWrapper = styled.div`
 
 `;
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled.div<{className?:string}>`
   display: flex;
   flex-direction: column;
   background-color: ${Colors.Secondary.Beige};
@@ -39,6 +39,11 @@ export const CardWrapper = styled.div`
     width: 380px;
     align-items: center;
     text-align: center;
+  }
+  @media (min-width: ${ScreenBreakPoints.lg}px){
+    &.topChef{
+      width: 231px;
+    }
   }
 `;
 
@@ -69,11 +74,7 @@ export const Title = styled.h1<{ $chefName?: string; $description?: string }>`
   font-size: 20px;
   font-weight: 400;
   line-height: 47px;
-  margin-bottom: ${({ $chefName, $description }) => {
-      if ($chefName && !$description) return '0';
-      if ($description) return '0';
-      return '0';
-    }};
+  margin-bottom: 0;
   padding-bottom: ${({ $chefName, $description }) => {
       if ($chefName && !$description) return '0';
       if ($description) return '0';
@@ -91,6 +92,11 @@ export const Title = styled.h1<{ $chefName?: string; $description?: string }>`
     justify-content: left;
     padding-left: 96px;
     padding-right: 96px;
+    &.topChef{
+      font-size: 30px;
+
+
+    }
   }
 `;
 

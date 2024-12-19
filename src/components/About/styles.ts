@@ -7,10 +7,11 @@ export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 40px;
+  padding-left: 16px;
+  padding-top: 24px;
   margin: 0 auto;
   background: ${Colors.Secondary.LightGrey};
-  width: 100%;  /* הרקע יתפשט על כל רוחב המסך */
+  width: 100%; 
   box-sizing: border-box;
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
@@ -22,13 +23,14 @@ export const AboutContainer = styled.div`
 
 export const AboutContent = styled.div`
   width: 100%;
+  display: flex;
   flex-direction: column;
 
   @media (min-width: ${ScreenBreakPoints.md}px){
-    max-width: 1185px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
+    max-width: 1185px;  
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
 
   }
 
@@ -53,11 +55,13 @@ export const RightSide = styled.div`
   order: 1;
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
+    position: relative; 
     padding: 10em;
     order: 0;
     flex: 1;
     display: flex;
     justify-content: right;
+    align-items: center;
     width: 50%;
     height: auto;
     max-width: 178.22px;
@@ -84,12 +88,18 @@ export const Paragraph = styled.p`
 
 export const ButtonContainer = styled.div`
   display: flex;
+  flex-direction: column-reverse;
   gap: 10px;
   margin-top: 20px;
+  margin-bottom: 48px;
+  @media (min-width: ${ScreenBreakPoints.md}px) {
+    margin-bottom:0;
+    flex-direction: row;
+  }
 `;
 
 export const StoreButton = styled.img`
-  width: 150px;
+  max-width: 180px;
   height: auto;
   cursor: pointer;
 
@@ -99,8 +109,13 @@ export const StoreButton = styled.img`
 `;
 
 export const Logo = styled.img`
-  width: 180px;
+  max-width: 120px;
   height: auto;
+  @media (min-width:${ScreenBreakPoints.md}px) {
+    max-width: 180px;
+    position: relative;
+    left: 129px;
+  }
 `;
 
 export const AboutText = styled.div`
