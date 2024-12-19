@@ -6,7 +6,7 @@ import { Typography } from "../Typography";
 export const FooterContainer=styled.div`
     display: flex;
     flex-direction: column; 
-    padding: 30px;
+    padding: 19px;
     width: 100%;
     margin: 0 auto;
     background: ${Colors.Secondary.White};
