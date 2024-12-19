@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 import { ScreenBreakPoints } from '../constants/BreakPoints';
 export const Typography = {
   H1: css`
-    font-family: 'Helvetica Neue', sans-serif;;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 24px; 
     font-weight: 300;
     color: #000000;
