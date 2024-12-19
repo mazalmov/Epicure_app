@@ -26,6 +26,8 @@ const MobileHeader: React.FC = () => {
                         src={hambur}
                         alt={"hambur"}
                         className="hambur"
+                        $maxWidth={"24"}
+                        $maxHeight={"24"}
                     />
                 </DynamicButton>
             </HamburContainer>
@@ -36,18 +38,20 @@ const MobileHeader: React.FC = () => {
                             src={logo}
                             alt={"logo"}
                             className="logo"
+                            $maxWidth={"33"}
+                            $maxHeight={"32"}
                         />
                     </DynamicButton>
                 </RotatingElement>
             </LogoContainer>
             <TreeButtonContainer>
-                    <DynamicButton>
-                        <Image
-                            src={searchIcon}
-                            alt={"searchIcon"}
-                            className="searchIcon"
-                        />
-                    </DynamicButton>
+                <DynamicButton>
+                    <Image
+                        src={searchIcon}
+                        alt={"searchIcon"}
+                        className="searchIcon"
+                    />
+                </DynamicButton>
                 <DynamicButton>
                     <Image
                         src={userIcon}
