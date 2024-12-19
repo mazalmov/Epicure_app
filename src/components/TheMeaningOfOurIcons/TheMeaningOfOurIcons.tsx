@@ -1,5 +1,4 @@
 import React from "react";
-import IconMeaning from "../IconMeaning/IconMeaning";
 import { iconMap } from "../../constants/IconMap";
 import {
     MeaningIconsContainer, Title, Text, IconContainer,TreeIcons,TitleConteiner
@@ -29,10 +28,9 @@ export const TheMeaningOfOurIcons: React.FC = () => {
 
             {iconsData.map((icon, index) => (
                 <IconContainer key={index}>
-                    <div>
-                        <IconMeaning iconName={icon.iconName} />
+                        <img src={iconMap[icon.iconName]} alt={icon.iconName} />
                         <Text>{icon.label}</Text>
-                    </div>
+                    
                 </IconContainer>
             ))}
             </TreeIcons>
