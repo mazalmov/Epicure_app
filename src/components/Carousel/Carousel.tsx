@@ -18,7 +18,7 @@ interface CarouselProps {
     cards: CardData[];
 }
 
-const Carousel: React.FC<CarouselProps> = ({ cards }) => {
+const Carousel: React.FC<CarouselProps & {className?:string}> = ({ cards ,className}) => {
     const [isDesktop, setIsDesktop] = useState(false);
 
     useEffect(() => {
@@ -33,7 +33,7 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
     }, []);
 
     return (
-        <CarouselWrapper>
+        <CarouselWrapper> 
             <Swiper
                 spaceBetween={10}
                 slidesPerView={isDesktop ? 3 : 1.5}
@@ -56,17 +56,17 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
                     [ScreenBreakPoints.lg]:
                     {
                         slidesPerView: 3,
-                        spaceBetween: 24,
+                        spaceBetween: className ? 16 : 24,
                     },
                 }}
             >
                 {cards.slice(0, isDesktop ? 3 : cards.length).map((card) => (
                     <SwiperSlide key={card.id}>
-                        <CardWrapper>
+                        <CardWrapper className={className}>
                             <Image>
                                 <img src={card.imageUrl} alt={card.title} />
                             </Image>
-                            <Title $chefName={card.chefname} $description={card.description}> {card.title} </Title>
+                            <Title $chefName={card.chefname} $description={card.description} className={className}> {card.title}  </Title>
                             {card.chefname && <ChefName>{card.chefname}</ChefName>}
                             {card.stars && <Stars rating={card.stars} />}
                             {card.description && card.icon && (
