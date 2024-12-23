@@ -3,7 +3,7 @@ import { Typography } from '../Typography';
 import { ScreenBreakPoints } from '../../constants/BreakPoints';
 
 export const RestorantsContainer = styled.div<{ className?: string }>`
-  padding-left: 16px;
+  padding-left: 20px;
   margin: auto;
   align-items: center;
   justify-content: center;
@@ -20,9 +20,9 @@ export const RestorantsContainer = styled.div<{ className?: string }>`
     }
   }
   @media (min-width: ${ScreenBreakPoints.mmd}px) {
-    padding-left: 16px;
+    padding-left: 20px;
     &.topChef {
-      padding-left: 16px;
+      padding-left: 20px;
     }
   }
   @media (min-width: ${ScreenBreakPoints.lg}px) {
@@ -41,11 +41,11 @@ export const RestorantsContainer = styled.div<{ className?: string }>`
 
 export const Title = styled.h1<{ className?: string }>`
   text-align: left;
-  font-size: 36px;
   margin-bottom: 40px;
   color: #000;
   ${Typography.H1};
   letter-spacing: 1.25px;
+  font-size: 18px;
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
     text-align: center;

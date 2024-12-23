@@ -9,10 +9,9 @@ import IconNavigatorBuffer from '../../assets/General/IconRestaurantNavigator.pn
 interface CarouselContainerProp{
     cards: CardData[],
     title: string,
-    className?: "signatureDish" | "topChef" | "popularRestorant";
 }
 
-const CarouselContainer: React.FC <CarouselContainerProp>= ({cards,title,className}) => {
+const CarouselContainer: React.FC <CarouselContainerProp & {className?:string}>= ({cards,title,className}) => {
     return (
         <RestorantsContainer className={className}>
             <Title className={className}> {title}</Title>

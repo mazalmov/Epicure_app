@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import { Colors } from "../colors";
-import { Typography } from "../Typography";
 import { ScreenBreakPoints } from "../../constants/BreakPoints";
 
 export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 16px;
+  padding-left: 20px;
   padding-top: 24px;
   margin: 0 auto;
   background: ${Colors.Secondary.LightGrey};
@@ -15,9 +14,11 @@ export const AboutContainer = styled.div`
   box-sizing: border-box;
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+  @media (min-width: ${ScreenBreakPoints.lg}px) {
+    padding-left:0;
   }
 `;
 
@@ -27,7 +28,8 @@ export const AboutContent = styled.div`
   flex-direction: column;
 
   @media (min-width: ${ScreenBreakPoints.md}px){
-    max-width: 1185px;  
+    max-width: 1185px;
+    max-height: 430px ;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -53,7 +55,7 @@ export const LeftSide = styled.div`
 
 export const RightSide = styled.div`
   order: 1;
-
+  
   @media (min-width: ${ScreenBreakPoints.md}px) {
     position: relative; 
     padding: 10em;
@@ -69,21 +71,40 @@ export const RightSide = styled.div`
   }
 `;
 
-export const Title = styled.h1`
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #000;
+export const Title = styled.div`
+  font-family: Helvetica Neue;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 35px;
+  letter-spacing: 1.25px;
   text-align: left;
-  font: ${Typography.H1};
+  @media (min-width: ${ScreenBreakPoints.md}px) {
+    padding-top: 20px;
+    font-size: 30px;
+    letter-spacing: 2.140000104904175px;
+  }
 `;
 
 export const Paragraph = styled.p`
   display: flex;
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333;
+  font-family: Helvetica Neue;
+  line-height: 28px;
+  text-align: left;
+  font-weight: 200;
+  letter-spacing: 2.140000104904175px;
+  line-height: 28px;
+  color: #000000;
   margin-bottom: 20px;
-  font: ${Typography.BodyText};
+  font-size: 18px;
+  @media (min-width: ${ScreenBreakPoints.md}px) {
+  line-height: 30px;
+    font-size: 20px;
+    padding-left: 0;
+    padding-right: 27px;
+    & br {
+      display: none; 
+    }    
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -109,7 +130,7 @@ export const StoreButton = styled.img`
 `;
 
 export const Logo = styled.img`
-  max-width: 120px;
+  max-width: 102px;
   height: auto;
   @media (min-width:${ScreenBreakPoints.md}px) {
     max-width: 180px;

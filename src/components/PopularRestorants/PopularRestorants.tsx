@@ -16,7 +16,7 @@ const cards: CardData[] = [
 
 const PopularRestorants: React.FC = () => {
     return (
-            <CarouselContainer cards={cards} title="POPULAR RESTAURAN IN EPICURE:" className="popularRestorant" />      
+            <CarouselContainer cards={cards} title="POPULAR RESTAURANT IN EPICURE:" className="popularRestorant" />      
     );
 };
 

@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 import { ScreenBreakPoints } from '../../constants/BreakPoints';
 
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.button<{className?:string}>`
   display: flex; 
   justify-content: space-evenly;
   background: none;
@@ -22,8 +22,9 @@ export const ButtonContainer = styled.button`
     display: flex;
     padding-top: 18.5px;
     padding-bottom: 48px;
-    max-width: 172px;
-    max-height: 35px;
+    img{ 
+      max-width: 172px;
+      max-height: 35px;}
 
     @media (min-width: ${ScreenBreakPoints.md}px) {
       display: none; 
@@ -34,8 +35,10 @@ export const ButtonContainer = styled.button`
     display: flex;
     padding-top: 18.5px;
     padding-bottom: 48px;
+    img{
     max-width: 172px;
     max-height: 35px;
+  }
 
     @media (min-width: ${ScreenBreakPoints.md}px) {
       display: none; 
@@ -46,13 +49,18 @@ export const ButtonContainer = styled.button`
     display: flex;  
     padding-top: 18.5px;
     padding-bottom: 48px;
-    max-width: 172px;
+    img{
+      max-width: 172px;
     max-height: 35px;
+    }
 
     @media (min-width: ${ScreenBreakPoints.md}px) {
       justify-content: end;
+      img{
+      padding: 20px;
       max-width: 226px;
       max-height: 35px;
+    }
     }
   }
 `;

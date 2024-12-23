@@ -3,40 +3,37 @@ import { ScreenBreakPoints } from '../../constants/BreakPoints';
 import { Colors } from '../colors';
 
 export const CarouselWrapper = styled.div`
-  display: block;
+  display: flex;
   flex-wrap: nowrap;
   width: 100%;
   .swiper {
-    display: block;
+    display: flex;
     justify-content: center;
     height: 100%;
     width: 100%;
   }
   .swiper-slide {
-    display: block;
-    justify-content: center;
+    display: flex;
     align-items: center;
   }
   .swiper-container {
     width: 100%;
     display: block;
   }
-
-
 `;
 
 export const CardWrapper = styled.div<{className?:string}>`
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   background-color: ${Colors.Secondary.Beige};
   text-align: left;
   justify-content: center;
-  width: 245px;
-  height: auto;
+  max-width: 245px;
+  height: 100%;
   justify-content: space-between;
   @media (min-width: ${ScreenBreakPoints.md}px) {
-    height: auto;
-    width: 380px;
+    max-width: 380px;
     align-items: center;
     text-align: center;
   }
@@ -94,8 +91,6 @@ export const Title = styled.h1<{ $chefName?: string; $description?: string }>`
     padding-right: 96px;
     &.topChef{
       font-size: 30px;
-
-
     }
   }
 `;
@@ -111,6 +106,7 @@ export const Description = styled.div`
   padding-left: 16px;
   padding-right: 16px;
   justify-content: flex-end;
+  height: 120px;
   @media (min-width: ${ScreenBreakPoints.md}px) {
     justify-content: flex-end;
     padding-bottom: 10px;

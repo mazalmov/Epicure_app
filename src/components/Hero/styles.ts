@@ -13,6 +13,13 @@ export const HeroContainer = styled.div`
   background-position: center;
   width: 100%;
   background-size: cover;
+  margin-bottom: 48px;
+  @media (min-width: ${ScreenBreakPoints.md}px){
+    margin-bottom: 70px;
+  }
+  @media (min-width: ${ScreenBreakPoints.lg}px){
+    margin-bottom: 80px;
+  }  
 
 `;
 
@@ -20,23 +27,35 @@ export const Title = styled.h1`
   text-align: left;
   text-align: center;
   word-break: break-word;
+  width: auto;
+  letter-spacing: 1.9700000286102295px;
   ${Typography.H1}
+  margin-bottom: 0;
+  @media (min-width: ${ScreenBreakPoints.md}px){
+    max-width: 402px;
+    letter-spacing: 0;
+    margin-bottom: 16px;
+  }
 `;
 
 export const SearchContainer = styled.div`
   color: #000000;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #FFFFFFE0;
   max-width: 335px;
   margin-top: 65px;
   margin-bottom: 64px;
-  padding-left: 10px;
-  padding-right: 10px;
-
+  padding-left: 16px;
+  padding-right: 16px;
+  height: auto;
+  
+  @media (min-width: ${ScreenBreakPoints.sm}px) {
+    max-width: 505px; 
+  }
   @media (min-width: ${ScreenBreakPoints.md}px) {
-    max-height: 221px;
-    max-width: 776px;
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom:37px ;
@@ -44,38 +63,37 @@ export const SearchContainer = styled.div`
     margin-bottom: 239px;
   }
   @media (min-width: ${ScreenBreakPoints.lg}px) {
-
-    padding-left: 187px;
-    padding-right: 187px;
-
+    max-height: 221px;
+    width: 776px;
+    padding-left: 135px;
+    padding-right: 135px;
   }
 
 `;
 
 export const SearchBox = styled.div`
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 110%;
   height: 50px;
   box-sizing: border-box;
-  padding: 8px;
+  padding: 10px;
   justify-content: space-between;
   overflow: hidden;
   height: auto;
   overflow: hidden;
-  max-width: 100%;
-
   @media (min-width: ${ScreenBreakPoints.sm}px) {
-    max-width: 335px;
-    max-height: 144px;
+    width:100%;
+    padding:20px;
   }
   @media (min-width: ${ScreenBreakPoints.md}px) {
     max-width: 505px;
-    max-height: 48px;
+    padding: 0;
   }
 
   @media (min-width: ${ScreenBreakPoints.lg}px) {
-    min-width: 505px;
-    height: 50px;
   }
 `;
 
@@ -83,17 +101,16 @@ export const HeroSearchText = styled.input`
   flex-grow: 1;
   padding: 8px 8px 8px 32px;
   width: 100%;
-  height: 100%;
   border: 0.5px solid #000000;
   border-radius: 4px;
-  font-size: 32px;
   ${Typography.InputText};
+  font-size: 12px;
   box-sizing: border-box;
   background-image: url(${searchIcon});
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: left 8px center;
-  
+  letter-spacing: 1.2899999618530273px;
   overflow: visible;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -106,13 +123,14 @@ export const HeroSearchText = styled.input`
     outline: none;
   }
   @media (min-width: ${ScreenBreakPoints.sm}px) {
-    font-size: 12px;
     min-width: 375px;
   }
 
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
     background-position: left 12px center;
+    font-size: 24px;
+    letter-spacing: 0px;
 
   }
 

@@ -8,7 +8,7 @@ margin: auto;
   align-items: center;
   max-height: 63px;
   width: 100%;
-
+  position: relative;
   @media (min-width: ${ScreenBreakPoints.md}px) {
     display: none;
   }
@@ -47,6 +47,7 @@ export const LogoContainer = styled.div`
   max-width: 33px;
   padding-top: 7px;
   padding-bottom: 7px;
+  transform: translateX(100%);
 `;
 
 export const TreeButtonContainer = styled.div`
@@ -57,7 +58,7 @@ export const TreeButtonContainer = styled.div`
   max-width: 100px;
   max-height: 20px;
   gap: 20px;
-
+  
 `;
 
 export const Image = styled.img<{ $maxWidth?: string; $maxHeight?: string }>`

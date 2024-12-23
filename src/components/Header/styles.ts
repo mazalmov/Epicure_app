@@ -107,7 +107,7 @@ export const SearchText = styled.input`
   padding-bottom: 8px;
   border: none;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 12px;
 
   @media (min-width: ${ScreenBreakPoints.md}px) {
     display: block;
@@ -116,6 +116,6 @@ export const SearchText = styled.input`
 
   @media (min-width: ${ScreenBreakPoints.lg}px) {
     height: 34px;
-    font-size: 18px;
+    font-size: 28px;
   }
 `;
