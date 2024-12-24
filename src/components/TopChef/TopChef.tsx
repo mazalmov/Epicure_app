@@ -31,7 +31,7 @@ const TopChef: React.FC = () => {
     return (
         <TopChefContainer>
         <Chef fullName={ChefInfo.fullName} imageUrl={ChefInfo.imageUrl} chefInfo={ChefInfo.chefInfo}/>
-        <CarouselContainer cards={cards} title="Yossi’s Restaurants:" className={"topChef"}/>
+        <CarouselContainer cards={cards} title="YOSSI’S RESTAURANTS:" className={"topChef"}/>
         </TopChefContainer>
     );
 };

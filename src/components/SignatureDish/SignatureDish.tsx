@@ -15,7 +15,7 @@ const cards: CardData[] = [
 
 const SignatureDish: React.FC = () => {
     return (
-            <CarouselContainer cards={cards} title="POPULAR SIGNATURE DISH OF:" className="signatureDish" />
+            <CarouselContainer cards={cards} title="SIGNATURE DISH OF:" className="signatureDish" />
     );
 };
 

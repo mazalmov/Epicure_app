@@ -5,8 +5,7 @@ export const PriceContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
   color: #000;
   padding-bottom: 10px;
   padding-left:16px;
@@ -14,6 +13,7 @@ export const PriceContainer = styled.div`
     padding-left:0px;
     justify-content: center; 
     position: relative;
+    font-weight: normal;
     width: 80%;
     &::before,
     &::after {
@@ -34,11 +34,16 @@ export const PriceContainer = styled.div`
 `;
 
 export const PriceText = styled.span`
+font: Helvetica Neue;
 color: #000000;
-font-size: 24px;
-font-weight: 200;
+font-size: 16px;
+font-weight: normal;
 line-height: 30px;
 letter-spacing: 1.9700000286102295px;
 text-align: center;
 
+@media (min-width: ${ScreenBreakPoints.md}px){
+  font-size: 24px;
+  font-weight: 200;
+}
 `;

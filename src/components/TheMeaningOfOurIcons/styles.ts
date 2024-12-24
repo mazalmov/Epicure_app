@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Colors } from "../colors";
-import { Typography } from "../Typography";
 import { ScreenBreakPoints } from "../../constants/BreakPoints";
 
 export const MeaningIconsContainer = styled.div`
@@ -8,10 +7,13 @@ export const MeaningIconsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 16px;
+  padding-right: 20px;
   width: 100%;
   margin: 0 auto;
   background: ${Colors.Secondary.LightGrey};
+  @media (max-width:${ScreenBreakPoints.sm} ) {
+    padding-bottom: 24px;
+  }
 `;
 
 export const TitleConteiner = styled.div`
@@ -23,12 +25,11 @@ export const TitleConteiner = styled.div`
 
 export const Title = styled.h1`
   font-family: Helvetica Neue;
-  font-size: 18px;
   font-weight: 200;
   line-height: 35px;
   letter-spacing: 1.25px;
   text-align: center;
-  font:${Typography.H1};
+  font-size: 18px;
   margin-bottom: 32px;
   color: #000;
 
@@ -48,7 +49,6 @@ export const Text = styled.h3`
   letter-spacing: 1.25px;
   text-align: center;
   color: #000;
-  
   @media (min-width: ${ScreenBreakPoints.md}px) {
     font-size: 24px;
     line-height: 28px;
