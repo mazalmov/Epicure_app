@@ -50,7 +50,6 @@ const chefSlice = createSlice({
   },
 });
 
-// Selectors
 export const selectChef = (state: RootState) => state.chef.items;
 export const selectChefStatus = (state: RootState) => state.chef.status;
 

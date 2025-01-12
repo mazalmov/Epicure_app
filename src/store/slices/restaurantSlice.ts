@@ -51,7 +51,6 @@ const restaurantSlice = createSlice({
   },
 });
 
-// Selectors
 export const selectRestaurants = (state: RootState) => state.restaurants.items;
 export const selectRestaurantsStatus = (state: RootState) => state.restaurants.status;
 

@@ -31,7 +31,6 @@ export const fetchDishes = createAsyncThunk('dishes/fetchDishes', async () => {
     }
   });
 
-// יצירת slice
 const dishSlice = createSlice({
   name: 'dishes',
   initialState,
@@ -51,7 +50,6 @@ const dishSlice = createSlice({
   },
 });
 
-// Selectors
 export const selectDishes = (state: RootState) => state.dishes.items;
 export const selectDishesStatus = (state: RootState) => state.dishes.status;
 
