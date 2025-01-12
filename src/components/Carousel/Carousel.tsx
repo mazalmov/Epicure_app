@@ -66,8 +66,8 @@ const Carousel: React.FC<CarouselProps & {className?:string}> = ({ cards ,classN
                             <Image>
                                 <img src={card.imageUrl} alt={card.title} />
                             </Image>
-                            <Title $chefName={card.chefname} $description={card.description} className={className}> {card.title}  </Title>
-                            {card.chefname && <ChefName>{card.chefname}</ChefName>}
+                            <Title $chefName={card.chefName} $description={card.description} className={className}> {card.title}  </Title>
+                            {card.chefName && <ChefName>{card.chefName}</ChefName>}
                             {card.stars && <Stars rating={card.stars} />}
                             {card.description && card.icon && (
                                 <Description>

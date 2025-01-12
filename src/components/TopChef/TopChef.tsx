@@ -19,12 +19,12 @@ const ChefInfo: ChefProp=
 
 ;
 const cards: CardData[] = [
-    { id: 1, title: 'Onza', imageUrl: image1},
-    { id: 2, title: 'Kitchen Market', imageUrl: image2 },
-    { id: 3, title: 'Mashya', imageUrl: image3},
-    { id: 4, title: 'Onza', imageUrl: image1},
-    { id: 5, title: 'Kitchen Market', imageUrl: image2 },
-    { id: 6, title: 'Mashya', imageUrl: image3}
+    { id: "1", title: 'Onza', imageUrl: image1},
+    { id: "2", title: 'Kitchen Market', imageUrl: image2 },
+    { id: "3", title: 'Mashya', imageUrl: image3},
+    { id: "4", title: 'Onza', imageUrl: image1},
+    { id: "5", title: 'Kitchen Market', imageUrl: image2 },
+    { id: "6", title: 'Mashya', imageUrl: image3}
 
 ];
 const TopChef: React.FC = () => {
