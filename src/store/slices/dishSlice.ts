@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { RootState } from '../store';
 
 interface Dish {
   _id: string;
@@ -50,7 +49,7 @@ const dishSlice = createSlice({
   },
 });
 
-export const selectDishes = (state: RootState) => state.dishes.items;
-export const selectDishesStatus = (state: RootState) => state.dishes.status;
+// export const selectDishes = (state: RootState) => state.dishes.items;
+// export const selectDishesStatus = (state: RootState) => state.dishes.status;
 
 export default dishSlice.reducer;

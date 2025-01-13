@@ -1,18 +1,23 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchDishes,selectDishes, selectDishesStatus } from '../../store/slices/dishSlice';
+import { fetchDishes } from '../../store/slices/dishSlice';
 import { AppDispatch } from '../../store/store';
 import CarouselContainer from '../CarouselContainer/CarouselContainer';
 import { CardData } from '../../constants/CardData';
 import { iconMap } from '../../constants/IconMap';
 import { getRandomFromArray } from "../../constants/Functions";
+import { RootState } from '../../store/store';
 
 
 import image1 from '../../assets/SignatureDish/PadKiMao.png';
 import image2 from '../../assets/SignatureDish/GarbanzoFrito.png';
 import image3 from '../../assets/SignatureDish/SmokedPizza.png';
 
+export const selectDishes = (state: RootState) => state.dishes.items;
+export const selectDishesStatus = (state: RootState) => state.dishes.status;
+
 const SignatureDish: React.FC = () => {
+
   const dispatch = useDispatch<AppDispatch>(); 
   const dishes = useSelector(selectDishes); 
   const status = useSelector(selectDishesStatus); 

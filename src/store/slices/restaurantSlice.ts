@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { RootState } from '../store';
 
 interface Restaurant {
     _id: string;
@@ -51,7 +50,8 @@ const restaurantSlice = createSlice({
   },
 });
 
-export const selectRestaurants = (state: RootState) => state.restaurants.items;
-export const selectRestaurantsStatus = (state: RootState) => state.restaurants.status;
+//TODO: replace it inside components
+// export const selectRestaurants = (state: RootState) => state.restaurants.items;
+// export const selectRestaurantsStatus = (state: RootState) => state.restaurants.status;
 
 export default restaurantSlice.reducer;
