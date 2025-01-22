@@ -9,7 +9,6 @@ export const CarouselWrapper = styled.div`
   .swiper {
     display: flex;
     justify-content: center;
-    height: 100%;
     width: 100%;
   }
   .swiper-slide {
@@ -72,6 +71,7 @@ export const Title = styled.h1<{ $chefName?: string; $description?: string }>`
   font-weight: 400;
   line-height: 47px;
   margin-bottom: 0;
+  overflow: hidden;
   padding-bottom: ${({ $chefName, $description }) => {
       if ($chefName && !$description) return '0';
       if ($description) return '0';
@@ -100,6 +100,7 @@ export const Description = styled.div`
   font-family: Helvetica Neue;
   font-size: 16px;
   font-weight: 200;
+  overflow: hidden;
   line-height: 20px;
   letter-spacing: 1.9700000286102295px;
   text-align: left;
@@ -119,6 +120,7 @@ export const Description = styled.div`
   }
 `;
 
+
 export const Image = styled.div`
   width: 100%;
   display: flex;
@@ -127,7 +129,7 @@ export const Image = styled.div`
   overflow: hidden;
   img {
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit: cover;
   }
 `;

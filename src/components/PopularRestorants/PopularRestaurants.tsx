@@ -4,13 +4,7 @@ import { AppDispatch } from '../../store/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRestaurants } from "../../store/slices/restaurantSlice";
 import { CardData } from "../../constants/CardData";
-import { getRandomFromArray } from "../../constants/Functions";
 import { RootState } from '../../store/store';
-
-
-import image1 from '../../assets/PapularRestaurant/claro.png';
-import image2 from '../../assets/PapularRestaurant/Lumina.png';
-import image3 from '../../assets/PapularRestaurant/tiger-lily.png';
 
 export const selectRestaurants = (state: RootState) => state.restaurants.items;
 export const selectRestaurantsStatus = (state: RootState) => state.restaurants.status;
@@ -26,15 +20,11 @@ const PopularRestorants: React.FC = () => {
     useEffect(() => {
         dispatch(fetchRestaurants());
     }, [dispatch]);
-
-
-    const images = [image1, image2, image3];
-
+    
     const transformedRestaurants: CardData[] = restaurants.map((restaurant) => ({
         id: restaurant._id,
         title: restaurant.name,
-        // imageUrl: restaurant.image,
-        imageUrl: getRandomFromArray(images),
+        imageUrl: restaurant.image,
         chefName: (restaurant.chefId as any).name,
         stars: Number(restaurant.rank),
     }));

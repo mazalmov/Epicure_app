@@ -1,7 +1,7 @@
 import Header from "../components/Header/Header";
 import MobileHeader from "../components/Header/MobileHeader/MobileHeader";
 import Hero from "../components/Hero/Hero";
-import PopularRestorants from "../components/PopularRestorants/PopularRestorants";
+import PopularRestorants from "../components/PopularRestorants/PopularRestaurants";
 import SignatureDish from "../components/SignatureDish/SignatureDish";
 import About from "../components/About/About";
 import TheMeaningOfOurIcons from "../components/TheMeaningOfOurIcons/TheMeaningOfOurIcons";
@@ -13,14 +13,14 @@ function HomePage() {
   return (
     <HomePageContainer>
       <Header />
-      <MobileHeader/>
+      <MobileHeader />
       <Hero />
       <PopularRestorants />
       <SignatureDish />
-      <TheMeaningOfOurIcons/>
-      <TopChef/>
-      <About/>
-      <Footer/>
+      <TheMeaningOfOurIcons />
+      <TopChef />
+      <About />
+      <Footer />
     </HomePageContainer>
   );
 }
